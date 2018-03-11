@@ -7,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+
+  linkInicio: String = '#/inicio';
+  linkProductos: String = '#/productos';
+  linkServicios: String = '#/servicios';
+  linkMultimedia: String = '#/multimedia';
+  linkContacto: String = '#/contacto';
+
+  textoInicio: String = 'Inicio';
+  textoProductos: String = 'Productos';
+  textoServicios: String = 'Servicios';
+  textoMultimedia: String = 'Multimedia';
+  textoContacto: String = 'Contacto';
+
   constructor() { }
 
   ngOnInit() {
