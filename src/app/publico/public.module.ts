@@ -13,6 +13,8 @@ import { NgModule } from '@angular/core';
 import { SuperiorComponent } from './shared/header/superior/superior.component';
 import { BotonmenuComponent } from './shared/header/menu/botonmenu/botonmenu.component';
 import { MenuComponent } from './shared/header/menu/menu.component';
+import { MultimediaComponent } from './pages/multimedia/multimedia.component';
+import { AcercaComponent } from './pages/acerca/acerca.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +27,9 @@ import { MenuComponent } from './shared/header/menu/menu.component';
         FooterComponent,
         SuperiorComponent,
         BotonmenuComponent,
-        MenuComponent
+        MenuComponent,
+        MultimediaComponent,
+        AcercaComponent
     ],
     imports: [
         PUBLICO_ROUTES,

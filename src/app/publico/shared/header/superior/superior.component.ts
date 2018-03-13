@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-superior',
+  selector: 'app-pages-header-superior',
   templateUrl: './superior.component.html',
   styleUrls: ['./superior.styles.css']
 })

@@ -1,3 +1,5 @@
+import { MultimediaComponent } from './pages/multimedia/multimedia.component';
+import { AcercaComponent } from './pages/acerca/acerca.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { PagesComponent } from './pages/pages.component';
 import { Component } from '@angular/core';
@@ -15,6 +17,8 @@ const publicoRoutes: Routes = [{
             { path: 'inicio', component: InicioComponent},
             { path: 'productos', component: ProductosComponent},
             { path: 'servicios', component: ServiciosComponent},
+            { path: 'acerca', component: AcercaComponent},
+            { path: 'multimedia', component: MultimediaComponent},
             { path: '', redirectTo: '/inicio', pathMatch: 'full' }
         ]
     }

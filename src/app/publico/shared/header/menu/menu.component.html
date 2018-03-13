@@ -1,7 +1,27 @@
-<div class="container">
-  <app-botonmenu [linkMenu]= 'linkInicio' [textoMenu]='textoInicio' > </app-botonmenu>
-  <app-botonmenu [linkMenu]= 'linkProductos' [textoMenu]='textoProductos' > </app-botonmenu>
-  <app-botonmenu [linkMenu]= 'linkServicios' [textoMenu]='textoServicios' > </app-botonmenu>
-  <app-botonmenu [linkMenu]= 'linkMultimedia' [textoMenu]='textoMultimedia' > </app-botonmenu>
-  <app-botonmenu [linkMenu]= 'linkContacto' [textoMenu]='textoContacto' > </app-botonmenu>
-</div>
+
+    <nav class="navbar navbar-expand-lg   align-items-centerb navbar-expand-lg">
+        
+       <a class="navbar-brand" href="#">Navbar</a>
+        
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="container">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+     
+              
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <app-pages-header-menu-botonmenu [active]= '' [linkMenu]= 'linkInicio' [textoMenu]='textoInicio' > </app-pages-header-menu-botonmenu>
+              <app-pages-header-menu-botonmenu [active]= '' [linkMenu]= 'linkProductos' [textoMenu]='textoProductos' > </app-pages-header-menu-botonmenu>
+              <app-pages-header-menu-botonmenu [active]= '' [linkMenu]= 'linkServicios' [textoMenu]='textoServicios' > </app-pages-header-menu-botonmenu>
+
+              <img src="http://via.placeholder.com/102x102" class="img-fluid mx-auto d-block" alt="Responsive image">
+
+              <app-pages-header-menu-botonmenu [active]= '' [linkMenu]= 'linkMultimedia' [textoMenu]='textoMultimedia' > </app-pages-header-menu-botonmenu>
+              <app-pages-header-menu-botonmenu [active]= '' [linkMenu]= 'linkAcerca' [textoMenu]='textoAcerca' > </app-pages-header-menu-botonmenu>
+              <app-pages-header-menu-botonmenu [active]= '' [linkMenu]= 'linkContacto' [textoMenu]='textoContacto' > </app-pages-header-menu-botonmenu>
+          
+            </ul>
+         </div>
+      </div> 
+    </nav>
