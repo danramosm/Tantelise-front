@@ -1,3 +1,5 @@
+import { ProductoServiceService } from './pages/productos/producto-service.service';
+import { SlideServiceService } from './pages/inicio/slide/slide-service.service';
 import { AppComponent } from './../app.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -10,11 +12,12 @@ import { PagesComponent } from './pages/pages.component';
 import { PUBLICO_ROUTES } from './publico.routes';
 
 import { NgModule } from '@angular/core';
-import { SuperiorComponent } from './shared/header/superior/superior.component';
 import { BotonmenuComponent } from './shared/header/menu/botonmenu/botonmenu.component';
 import { MenuComponent } from './shared/header/menu/menu.component';
 import { MultimediaComponent } from './pages/multimedia/multimedia.component';
 import { AcercaComponent } from './pages/acerca/acerca.component';
+import { SlideComponent } from './pages/inicio/slide/slide.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -25,16 +28,17 @@ import { AcercaComponent } from './pages/acerca/acerca.component';
         ServiciosComponent,
         HeaderComponent,
         FooterComponent,
-        SuperiorComponent,
         BotonmenuComponent,
         MenuComponent,
         MultimediaComponent,
-        AcercaComponent
+        AcercaComponent,
+        SlideComponent
     ],
     imports: [
         PUBLICO_ROUTES,
+        CommonModule
     ],
-    providers: [],
+    providers: [SlideServiceService, ProductoServiceService],
     bootstrap: [AppComponent]
 })
 

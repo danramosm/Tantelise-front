@@ -1,30 +1,28 @@
+
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivationEnd } from '@angular/router';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+
 
 @Component({
   selector: 'app-pages-header-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: []
 })
 export class MenuComponent implements OnInit {
-
-
-  linkInicio: String = '#/inicio';
-  linkProductos: String = '#/productos';
-  linkServicios: String = '#/servicios';
-  linkMultimedia: String = '#/multimedia';
-  linkContacto: String = '#/contacto';
-  linkAcerca: String = '#/acerca';
-
-  textoInicio: String = 'Inicio';
-  textoProductos: String = 'Productos';
-  textoServicios: String = 'Servicios';
-  textoMultimedia: String = 'Multimedia';
-  textoContacto: String = 'Contacto';
-  textoAcerca: String = 'Acerca de';
-
-  constructor() { }
 
   ngOnInit() {
   }
 
+  constructor( private router: Router) {
+    this.router.events
+      .filter(evento => evento instanceof ActivationEnd)
+      .filter( (evento: ActivationEnd) => evento.snapshot.firstChild == null)
+      .map( (evento: ActivationEnd) => evento.snapshot.data)
+      .subscribe( event => {
+        console.log(event);
+      });
+
+      }
 }

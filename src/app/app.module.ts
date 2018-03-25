@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { PublicoModule } from './publico/public.module';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

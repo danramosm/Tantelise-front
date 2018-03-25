@@ -1,3 +1,32 @@
-<p>
-  productos works!
-</p>
+<div class="animated fadeIn pt-5">
+
+  <h1>Nuestros mejores productos para disfrutar</h1>
+
+      <div>
+          <form class="form-inline">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class=" fa fa-search my-auto"></i>    
+                  </div>            
+                </div>
+                
+                <input id="search" placeholder="Buscar" fromControlName="search" class="form-control " type="text"/>
+
+              </div>
+          </form>
+      </div>     
+
+  <div class="row mx-0">
+      <div class="card col-sm-12 col-md-4 col-lg-3 my-3" *ngFor="let producto of productoLista; first as isFirst" >
+        <div class="card-header"><h5 class="card-title">{{producto.nombre}}</h5><small>Tipo producto: {{producto.categoria}}</small></div>
+        <img class="card-img-top" src="{{producto.urlThumbnail}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{producto.descripcion}}</p>
+        </div>
+        <div class="card-footer text-muted">
+          $ {{producto.precioProducto}} por cada {{producto.unidadVenta}}
+        </div>
+      </div>
+  </div>
+</div>

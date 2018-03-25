@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 
 import {Routes, RouterModule} from '@angular/router';
 
@@ -13,13 +14,13 @@ const publicoRoutes: Routes = [{
         path: '',
         component: PagesComponent,
         children: [
-            { path: 'contacto', component: ContactoComponent},
-            { path: 'inicio', component: InicioComponent},
-            { path: 'productos', component: ProductosComponent},
-            { path: 'servicios', component: ServiciosComponent},
-            { path: 'acerca', component: AcercaComponent},
-            { path: 'multimedia', component: MultimediaComponent},
-            { path: '', redirectTo: '/inicio', pathMatch: 'full' }
+            { path: 'contacto', component: ContactoComponent, data: {titulo: 'Contácto'}},
+            { path: 'inicio', component: InicioComponent, data: {titulo: 'Inicio'}},
+            { path: 'productos', component: ProductosComponent, data: {titulo: 'Productos'}},
+            { path: 'servicios', component: ServiciosComponent, data: {titulo: 'Servicios'}},
+            { path: 'acerca', component: AcercaComponent, data: {titulo: 'Acerca de'}},
+            { path: 'multimedia', component: MultimediaComponent, data: {titulo: 'Multimedia'}},
+            { path: '**', component: PagenotfoundComponent, data: {titulo: 'Página no encontrada'} }
         ]
     }
 ];
