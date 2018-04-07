@@ -9,9 +9,6 @@ body {
     background-color:#eaebb934;
   }
 
-  html,body{
-  }
-  
   /* 
 Header
   */ 
@@ -31,6 +28,9 @@ Header
         padding: 4px 12px;
   }
 
+.navbar > .container >.d-flex{
+  width: 100%;
+}
 
 .navbar-nav .nav-link{
   color:rgb(234, 236, 186) !important;
@@ -53,7 +53,7 @@ Header
   font-family: 'Satisfy', cursive;
 }
 
-  .nav-scroller {
+.nav-scroller {
     position: relative;
     z-index: 2;
     height: 2.75rem;
@@ -124,14 +124,34 @@ footer .text-muted, a{
 
 footer i:hover{
   color: #eaecba;
-
 }
+
+/* INICIO */
+
+.carousel-caption{
+  background-color: rgba(0, 0, 0, 0.49);
+}
+
+
+/* mseccción multimedia */
+
+.galeria img{
+  box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow:  0px 1px 6px 1px rgba(0, 0, 0, 0.75);
+}
+
+.galeria img:hover{
+  filter: gray;
+  -webkit-filter:grayscale(1);
+}
+
 
 /* Responsive */
   @media (max-width: 767.98px) {
     .offcanvas-collapse {
       position: fixed;
-      top: 56px; /* Height of navbar */
+      top: 74px; /* Height of navbar */
       bottom: 0;
       width: 100%;
       padding-right: 1rem;
@@ -167,21 +187,3 @@ footer i:hover{
 
    }
 
-   /* buscar productos dropdown */
-   .productos-search-dropdown{
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    max-height: 300px;
-    background-color: #fff;
-    top:100%;
-    border-right: 1px #ced4da solid;
-    border-left: 1px #ced4da solid;
-    border-bottom: 1px #ced4da solid;
-    overflow-y: auto;
-   }
-
-   .dropproductos-item:hover{
-    background-color: #ced4da;
-
-   }
