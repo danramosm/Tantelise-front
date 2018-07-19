@@ -19,17 +19,19 @@
 
         <div class="navbar-collapse offcanvas-collapse d-md-flex justify-content-center" id="navbarsExampleDefault">
 
+          <div data-toggle="offcanvas">
+            <ul class="navbar-nav d-flex ">
+                <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/inicio']"><i class="fas fa-home"></i> Inicio</a></li>
+                <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/productos']"><i class="fas fa-birthday-cake"></i> Productos</a></li>
+                <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/servicios']"><i class="fas fa-glass-martini"></i> Servicios</a></li>
 
-          <ul class="navbar-nav d-flex ">
-              <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/inicio']"><i class="fas fa-home"></i> Inicio</a></li>
-              <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/productos']"><i class="fas fa-birthday-cake"></i> Productos</a></li>
-              <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/servicios']"><i class="fas fa-glass-martini"></i> Servicios</a></li>
 
+                <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/multimedia']"><i class="fas fa-camera"></i> Multimedia</a></li>
+                <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/acerca']"><i class="fas fa-users"></i> Acerca de</a></li>
+                <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/contacto']"><i class="fas fa-envelope"></i> Contácto</a></li>
+            </ul>            
+        </div>
 
-              <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/multimedia']"><i class="fas fa-camera"></i> Multimedia</a></li>
-              <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/acerca']"><i class="fas fa-users"></i> Acerca de</a></li>
-              <li routerLinkActive="active" ><a class="nav-link" [routerLink]="['/contacto']"><i class="fas fa-envelope"></i> Contácto</a></li>
-          </ul>
         </div>
     </div>
 </nav>

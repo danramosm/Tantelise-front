@@ -10,15 +10,26 @@ import { Producto } from './producto/producto.interface';
 })
 export class ProductosComponent implements OnInit {
 
+
   private productoLista: Producto[];
+   filtro;
+
   constructor(private productosService: ProductoServiceService) {
   }
 
 
   ngOnInit() {
+    this.cargarData();
+  }
+
+  cargarData(){
     this.productoLista = this.productosService.getProductoLista();
     console.log(this.productoLista);
   }
 
+  filtrarProductosPorNombre(nombrePorFiltrar: string){
+      console.log(nombrePorFiltrar);
+    }
 
+  
 }
